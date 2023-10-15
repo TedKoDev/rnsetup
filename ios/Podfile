@@ -30,6 +30,9 @@ target 'rnsetup' do
 
   # Flags change depending on the env values.
   flags = get_default_flags()
+  # 모듈러 관련 넣기 modular_headers  <--요것들
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
 
   use_react_native!(
     :path => config[:reactNativePath],
